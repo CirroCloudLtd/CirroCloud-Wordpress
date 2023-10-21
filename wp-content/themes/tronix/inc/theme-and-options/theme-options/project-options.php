@@ -1,0 +1,83 @@
+<?php
+//project Page Options
+CSF::createSection( $TronixThemeOption, array(
+    'title'  => esc_html__( 'Portfolio Page', 'tronix' ),
+    'icon'   => 'fa fa-th-large',
+    'fields' => array(
+        array(
+            'id'       => 'Tronix_project_banner_enable',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Enable Banner', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show Banner.', 'tronix' ),
+        ),
+        array(
+            'id'      => 'Tronix_portfolio_custom_slug',
+            'type'    => 'text',
+            'title'   => esc_html__( 'Custom Slug', 'tronix' ),
+            'default' => esc_html( 'tronix-project', 'tronix' ),
+        ),
+        array(
+            'id'       => 'Tronix_portfolio_tag',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Show Tags', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show Portfolio Tags', 'tronix' ),
+        ),
+        array(
+            'id'       => 'Tronix_portfolio_share',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Show Share Icon', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show Portfolio Share Button', 'tronix' ),
+        ),
+        array(
+            'id'      => 'Tronix_portfolio_share_text',
+            'type'    => 'text',
+            'title'   => esc_html__( 'Share Text', 'tronix' ),
+            'default' => esc_html( 'Share :', 'tronix' ),
+            'dependency' => array( 'Tronix_portfolio_share', '==', 'true' ),
+        ),
+		array(
+		  'type'    => 'submessage',
+		  'style'   => 'success',
+		  'content' => esc_html__( 'Related Portfolio Options', 'tronix' ),
+		),
+		array(
+            'id'       => 'Tronix_project_related',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Show Related Item', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show Related Project.', 'tronix' ),
+        ),
+        array(
+            'id'         => 'Tronix_project_related_title',
+            'type'       => 'text',
+            'title'      => esc_html__( 'Related Title', 'tronix' ),
+            'default'    => esc_html( 'Related Project', 'tronix' ),
+            'dependency' => array( 'Tronix_project_related', '==', 'true' ),
+        ),
+		array(
+			'id'          => 'Tronix_portfolio_related_margin',
+			'type'        => 'spacing',
+			'title'       => esc_html__( 'Margin', 'tronix' ),
+			'output'      => '.tp-related-portfolio-wrapper',
+			'dependency' => array( 'Tronix_project_related', '==', 'true' ),
+			'desc'     => esc_html__( 'Add Related margin Portfolio', 'tronix' ),
+			'output_mode' => 'margin',
+			'default'     => array(
+				'top'       => '0',
+				'bottom'    => '170',
+				'unit'      => 'px',
+			),
+		),
+    ),
+) );

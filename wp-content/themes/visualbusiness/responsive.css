@@ -1,0 +1,180 @@
+/* Responsive CSS Style */
+/* Begin of mobile navigation fix */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .submenu-container,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
+  padding-top: 1rem; }
+
+@media (min-width: 960px) {
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: none !important; }
+
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: block !important;
+    width: 100%;
+    position: relative;
+    z-index: auto;
+    background-color: inherit; } }
+/* neutralize the wp default for 600px */
+@media (min-width: 600px) {
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: flex; }
+
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: none; } }
+/* End of mobile navigation fix */
+@media only screen and (max-width: 1180px) {
+  .is-layout-constrained {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto; }
+    .is-layout-constrained.has-background {
+      width: 100%; }
+    .is-layout-constrained .is-layout-constrained {
+      width: 100%; }
+
+  .wp-block-group.alignfull .is-layout-constrained {
+    width: 100%; }
+
+  .entry-content.is-layout-constrained {
+    width: 100%; }
+    .entry-content.is-layout-constrained .wp-block-group.alignwide {
+      width: 96%;
+      margin-left: auto;
+      margin-right: auto; }
+    .entry-content.is-layout-constrained .wp-block-group.alignfull.has-background,
+    .entry-content.is-layout-constrained .wp-block-group.alignfull.is-layout-constrained {
+      width: 100%; }
+    .entry-content.is-layout-constrained .wp-block-group.is-layout-constrained {
+      width: 96%; }
+      .entry-content.is-layout-constrained .wp-block-group.is-layout-constrained .is-layout-constrained {
+        width: 100%; }
+      .entry-content.is-layout-constrained .wp-block-group.is-layout-constrained.pricing-table {
+        width: 100%; }
+    .entry-content.is-layout-constrained .pricing-table {
+      width: 100%;
+      padding: 0; }
+
+  footer.wp-block-template-part .is-layout-constrained {
+    width: 100%; }
+    footer.wp-block-template-part .is-layout-constrained .is-layout-constrained {
+      width: 100%; }
+
+  .wp-block-group.has-background {
+    padding: 1rem; } }
+@media only screen and (min-width: 960px) and (max-width: 1179px) {
+  header.wp-block-template-part .wp-block-navigation {
+    gap: 18px; }
+    header.wp-block-template-part .wp-block-navigation .wp-block-navigation-item {
+      font-size: 0.85rem; }
+
+  .featured-content .wp-block-cover {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important; }
+  .featured-content .featured-summary h2,
+  .featured-content .featured-summary p {
+    max-width: 50%; }
+
+  .content-left,
+  .content-right {
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    .content-left .wp-block-group,
+    .content-right .wp-block-group {
+      max-width: 100%; } }
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  header.wp-block-template-part .wp-block-buttons {
+    display: none !important; }
+  header.wp-block-template-part .wp-block-buttons > .wp-block-button {
+    display: none !important; }
+  header.wp-block-template-part .wp-block-site-title {
+    font-size: 1.4em; }
+
+  footer.wp-block-template-part .wp-block-group.has-background {
+    padding: 1.25rem !important; }
+
+  .featured-content .wp-block-cover {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important; }
+  .featured-content .featured-summary {
+    text-align: center;
+    margin: 0 auto; }
+    .featured-content .featured-summary h2,
+    .featured-content .featured-summary p,
+    .featured-content .featured-summary .wp-block-buttons {
+      max-width: 100%; }
+    .featured-content .featured-summary .wp-block-buttons {
+      margin-left: auto !important;
+      margin-right: auto !important; }
+      .featured-content .featured-summary .wp-block-buttons .wp-block-button {
+        margin-left: auto;
+        margin-right: auto; }
+
+  .content-left,
+  .content-right {
+    padding: 2rem !important;
+    max-width: 100% !important;
+    margin: 0 !important; }
+    .content-left .wp-block-group,
+    .content-right .wp-block-group {
+      max-width: 100%; }
+      .content-left .wp-block-group h2,
+      .content-left .wp-block-group p,
+      .content-right .wp-block-group h2,
+      .content-right .wp-block-group p {
+        width: 100% !important;
+        max-width: 100% !important; }
+
+  .page-header .wp-block-cover {
+    min-height: auto !important; } }
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .top-bar .top-address {
+    display: none; }
+
+  .featured-content .featured-summary {
+    max-width: 80%; } }
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  .top-bar .top-email,
+  .top-bar .top-address {
+    display: none; }
+
+  .featured-content .wp-block-cover {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; }
+
+  .content-loop {
+    padding: 20px !important; }
+    .content-loop .wp-block-post {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem; }
+    .content-loop figure,
+    .content-loop .wp-block-post-featured-image {
+      float: none;
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 0 1rem 0 !important; }
+      .content-loop figure a,
+      .content-loop .wp-block-post-featured-image a {
+        height: 100% !important; }
+      .content-loop figure img,
+      .content-loop .wp-block-post-featured-image img {
+        height: auto !important; } }
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .top-bar .top-email,
+  .top-bar .top-address {
+    display: none; } }
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .wp-block-heading br {
+    display: none; }
+
+  .features-list {
+    text-align: center; }
+
+  .content-loop .wp-block-post-title {
+    font-size: 1.1rem !important; } }
+
+/*# sourceMappingURL=responsive.css.map */

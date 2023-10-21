@@ -1,0 +1,105 @@
+<?php
+//Blog Page Options
+CSF::createSection( $TronixThemeOption, array(
+    'parent' => 'Tronix_page_options',
+    'title'  => esc_html__( 'Blog Page', 'tronix' ),
+    'icon'   => 'fa fa-pencil-square-o',
+    'fields' => array(
+        array(
+            'id'      => 'Tronix_blog_layout',
+            'type'    => 'select',
+            'title'   => esc_html__( 'Blog Layout', 'tronix' ),
+            'options' => array(
+                'grid'          => esc_html__( 'Grid Full', 'tronix' ),
+                'grid-ls'       => esc_html__( 'Grid With Left Sidebar', 'tronix' ),
+                'grid-rs'       => esc_html__( 'Grid With Right Sidebar', 'tronix' ),
+                'left-sidebar'  => esc_html__( 'Left Sidebar', 'tronix' ),
+                'right-sidebar' => esc_html__( 'Right Sidebar', 'tronix' ),
+            ),
+            'default' => 'right-sidebar',
+            'desc'    => esc_html__( 'Select blog page layout.', 'tronix' ),
+        ),
+        array(
+            'id'       => 'Tronix_blog_banner_enable',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Enable Banner', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show Banner.', 'tronix' ),
+        ),
+        array(
+            'id'         => 'Tronix_blog_title',
+            'type'       => 'text',
+            'title'      => esc_html__( 'Banner Title', 'tronix' ),
+            'dependency' => array( 'Tronix_blog_banner_enable', '==', 'true' ),
+            'desc'       => esc_html__( 'Type blog banner title here.', 'tronix' ),
+        ),
+        
+        array(
+            'id'       => 'Tronix_post_author',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Show Author Name', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show post author name.', 'tronix' ),
+        ),
+
+        array(
+            'id'       => 'Tronix_post_date',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Show Post Date', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show post date.', 'tronix' ),
+        ),
+
+        array(
+            'id'       => 'Tronix_cmnt_number',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Show Comment Number', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show post comment number.', 'tronix' ),
+        ),
+
+        array(
+            'id'       => 'Tronix_show_category',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Show Category Name', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show post category name.', 'tronix' ),
+        ),
+        array(
+            'id'       => 'Tronix_show_pagination',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Show Pagination', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show post category name.', 'tronix' ),
+        ),
+        array(
+            'id'       => 'Tronix_show_readmore',
+            'type'     => 'switcher',
+            'title'    => esc_html__( 'Show Readmore Button', 'tronix' ),
+            'default'  => true,
+            'text_on'  => esc_html__( 'Yes', 'tronix' ),
+            'text_off' => esc_html__( 'No', 'tronix' ),
+            'desc'     => esc_html__( 'Hide / Show post category name.', 'tronix' ),
+        ),
+        array(
+            'id'         => 'Tronix_blog_read_text',
+            'type'       => 'text',
+            'default'    => esc_html__( 'Read More', 'tronix' ),
+            'title'      => esc_html__( 'Read More Text', 'tronix' ),
+            'dependency' => array( 'Tronix_show_readmore', '==', 'true' ),
+            'desc'       => esc_html__( 'Add ReadMore Text here.', 'tronix' ),
+        ),
+    ),
+) );
